@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 
 app.secret_key = 'not a secret'
-app.config['SERVER_NAME'] = ''
+app.config['SERVER_NAME'] = 'http://localhost:8080'
 
 
 
@@ -37,7 +37,7 @@ app.config['SAML2_IDENTITY_PROVIDERS']  = [
         'CLASS' : 'flask_smal2.sp.idphandler.IdPHandler',
         'OPTIONS' : {
             'display_name': 'KeyCloak',
-            'entity_id' : '',
+            'entity_id' : 'http://localhost:8080/realms/TestRealm',
             'sso_url': '',
             'slo_url' : '',
             'certificate' : certificate_from_file('cert2.pem')
