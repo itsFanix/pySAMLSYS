@@ -2,6 +2,4 @@
 .venv/
 
 __pycache__
-cert2.pem
-sp-certificate.pem
-sp-private-key.pem
+keys/

@@ -27,8 +27,8 @@ app.config['SERVER_NAME'] = 'http://localhost:8080'
 
 
 app.config['SAML2_SP'] = {
-    'certificate' :'',
-    'private_key' : ''
+    'certificate' :certificate_from_file('sp-certificate.pem'),
+    'private_key' : private_key_from_file('sp-private-key.pem')
 
 }
 
@@ -50,9 +50,10 @@ app.config['SAML2_IDENTITY_PROVIDERS']  = [
 
 
 @app.route("/")
-def home(): 
+def index(): 
     return "Welcome Home"
 
 @app.route('/dashboard')
+@sp.login_required
 def dashboard():
     return 'You ar logged in using SAML!'
