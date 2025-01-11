@@ -1,7 +1,7 @@
 
 
 # Library I try to use in this project
-1. Python-saml : Wheel Error
+1. Python-saml : build Wheel Error
 2. Flask-saml2: It is no longer maintained, which leads to dependency issues
 
 
